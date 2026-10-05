@@ -6,8 +6,8 @@
 :root {
     --green: #0B261B;
     --brown: #301E16;
-    --red: #fcc8c2;
-    --white: #DBD6D3;
+    --red: #ffd8d4;
+    --white: #efeae7;
     --Garamond: 'EB Garamond', serif;
     --Lato: 'Cormorant Garamond', sans-serif;
     --font-size: 16px;
@@ -21,6 +21,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 @keyframes menuSlideIn {
@@ -44,7 +45,7 @@ body {
 nav {
     position: fixed;
     top: 0;
-    left: 100%;     
+    left: 105%;     
     animation: menuSlideOut 0.4s ease-in-out;
 
 
@@ -53,11 +54,11 @@ nav {
     width: 60%;
     
     text-align: center;
-    z-index: 2;
+    z-index: 9;
     background-color: var(--red);
     border: 1px solid var(--red);
     border-radius: 2px;
-    box-shadow: -4px 4px 4px rgba(254, 198, 198, 0.449);
+    box-shadow: -2px 2px 3px rgba(254, 198, 198, 0.449);
 }
 
 nav.active {
@@ -71,11 +72,11 @@ nav.active {
     width: 60%;
     
     text-align: center;
-    z-index: 2;
+    z-index: 9;
     background-color: var(--red);
     border: 1px solid var(--red);
     border-radius: 2px;
-    box-shadow: -4px 4px 4px rgba(254, 198, 198, 0.449);
+    box-shadow: -2px 2px 3px rgba(254, 198, 198, 0.449);
 }
 
 .nav-link {
@@ -95,9 +96,69 @@ nav.active {
     top: 1vw;
     right: 1vw;
     color: var(--brown);
+    z-index: 10;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: 0px 1px 4px var(--brown);
     z-index: 3;
 }
 
+.title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    font-family: var(--Garamond);
+    font-weight: 700;
+    font-size: 2.3rem;
+    text-shadow: 1px 1px 2px var(--red);
+    padding: 0 ;
+    margin: 0;
 
+    white-space: nowrap;
+}
 
+#description {
+    margin: 0;
+    padding: 2vh;
+    background-color: var(--white);
+    color: var(--brown);
+}
 
+.booking-button {
+    background-color: var(--white);
+    color: var(--brown);
+    font-family: var(--Lato);
+    font-weight: 900;
+    font-size: 1rem;
+
+    border: 2px solid var(--brown);
+    border-radius: 16px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 1vh;
+    text-align: center;
+}
